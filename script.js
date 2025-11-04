@@ -1,4 +1,4 @@
-// Smooth scroll for navigation links
+
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -12,7 +12,7 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add active class to nav links on scroll
+
 window.addEventListener('scroll', () => {
     let current = '';
     const sections = document.querySelectorAll('section');
@@ -33,7 +33,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Fade in sections on scroll
+
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -48,7 +48,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Apply fade in effect to all sections except hero
+
 document.querySelectorAll('section:not(.hero)').forEach(section => {
     section.style.opacity = '0';
     section.style.transform = 'translateY(30px)';
@@ -56,7 +56,7 @@ document.querySelectorAll('section:not(.hero)').forEach(section => {
     observer.observe(section);
 });
 
-// Add hover effect to skill cards
+
 document.querySelectorAll('.skill-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-5px) scale(1.02)';
@@ -67,7 +67,7 @@ document.querySelectorAll('.skill-card').forEach(card => {
     });
 });
 
-// Form validation
+
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
